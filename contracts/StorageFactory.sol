@@ -1,10 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.8;
-
-// EVM, Ethereum Virtual Machine
-// EVM, is a standard of how to deploy smart contracts to Aetherium like blockchains.
-// We can deploy solidity code to some Examples of EVM compactible blockchains such as 
-// Avalanche, Fantom, Polygon
+pragma solidity ^0.8.0;
 
 contract SimpleStorage {
     // This gets initialized to zero!
@@ -50,4 +45,11 @@ contract SimpleStorage {
     
 }
 
-// 0xd9145CCE52D386f254917e481eB44e9943F39138
+contract StorageFactory {
+    SimpleStorage public simpleStorage;
+
+    function createSimpleStorageContract() public {
+        // How does storage factory know what simple storage looks like?
+        simpleStorage = new SimpleStorage();
+    }
+}
