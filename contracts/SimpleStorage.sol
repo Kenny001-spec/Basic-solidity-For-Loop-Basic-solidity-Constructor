@@ -28,7 +28,7 @@ contract SimpleStorage {
     People[] public  people;
     // 0:2, Patrick, 1: 7, Jon
 
-    function store(uint256 _favoriteNumber) public {
+    function store(uint256 _favoriteNumber) public virtual {
         favoriteNumber = _favoriteNumber;
         // uint256 testVar = 5;    // just for the testing of the Deployed Contract
         // retrieve();
