@@ -13,4 +13,19 @@ contract StorageFactory {
         SimpleStorage simpleStorage = new SimpleStorage();
         simpleStorageArray.push(simpleStorage);
     }
+
+    function sfStore(uint256 _simpleStorageIndex, uint256 _simpleStorageNumber) public {
+        // In Order for you to interact with any contract, you're always going to need two things.
+        // Address of the contract
+        // ABI - Application binary interface.
+        simpleStorageArray[_simpleStorageIndex].store(_simpleStorageNumber);
+       
+    }
+
+        // creating a new function that can read  from the simple storage contract from the storage factory
+    function sfGet(uint256 _simpleStorageIndex) public view returns(uint256) {
+        return simpleStorageArray[_simpleStorageIndex].retrieve();
+        
+    }
+
 }
