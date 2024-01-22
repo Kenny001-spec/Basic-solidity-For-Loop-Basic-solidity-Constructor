@@ -13,10 +13,22 @@
 				"type": "function"
 			},
 			{
-				"inputs": [],
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "ethAmount",
+						"type": "uint256"
+					}
+				],
 				"name": "getConversationRate",
-				"outputs": [],
-				"stateMutability": "nonpayable",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
 				"type": "function"
 			},
 			{
@@ -95,11 +107,11 @@
 			]
 		},
 		"contracts/FundMe.sol": {
-			"keccak256": "0x02567ab336907a326b56f893ea69525babd0900b6926fa29a22563924a35cb66",
+			"keccak256": "0xe422a5f1d191e0c8b5aa382f3cdb3f394e9171a2eb464f24f2fd98dd9ee35876",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://722c3f6b8ca0d7f3ae8e6da8a17f578b5ad2255ad156a3438f8a7d943805bfd2",
-				"dweb:/ipfs/QmWf92Vp8gtv7XPZ969qYSSKbx2s1e29D6fsr2fFUXTewE"
+				"bzz-raw://15992fc7acdae2a716d844b98ab7613628aa2736a9f55ed1a8bc2d5a734e32a5",
+				"dweb:/ipfs/QmWz8Za3dD4YeLgZG3t9Uj1zMZo66DpoS3jcpanCDbTwTs"
 			]
 		}
 	},

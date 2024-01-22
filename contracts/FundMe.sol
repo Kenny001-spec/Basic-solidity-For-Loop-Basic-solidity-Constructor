@@ -10,11 +10,12 @@ import "@chainlink/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol";
 
 contract FundMe  {
     
-    uint256 public minimumUsd = 50;
+    uint256 public minimumUsd = 50 * 1e18; // 1 * 10 ** 18
+
     function fund() public payable {
         // We want to be able to set a minimum fund amout in UsD
         // 1. How do we send Eth to this contract
-        require(msg.value > 1e18, "Didn't send enough!"); // 1e18 == 1 * 10 ** 18 == 1000000000000000000
+        require(getConversationRate(msg.value) >= minimumUsd, "Didn't send enough!"); // 1e18 == 1 * 10 ** 18 == 1000000000000000000
         // 18 decimals
 
         // What is reverting?
@@ -37,12 +38,14 @@ contract FundMe  {
         return priceFeed.version();
     }
 
-    function getConversationRate(uint256 ethAmount) public {
+    function getConversationRate(uint256 ethAmount) public view returns (uint256) {
         uint256 ethPrice = getPrice();
-        // 3000_000000000000000000 = ETH / USD price
-        // 1_000000000000000000 ETH
         uint256 ethAmountInUsd = (ethPrice * ethAmount) / 1e18;
         return ethAmountInUsd;
+
+        // 3000_000000000000000000 = ETH / USD price
+        // 1_000000000000000000 ETH
+        // 2999.999999999999999999
     }
         // function withdraw(){}
     
