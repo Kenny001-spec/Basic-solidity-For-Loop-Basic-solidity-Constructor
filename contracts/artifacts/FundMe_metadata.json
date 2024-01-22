@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.8.13+commit.abaa5c0e"
+		"version": "0.8.22+commit.4fc1097e"
 	},
 	"language": "Solidity",
 	"output": {
@@ -14,7 +14,40 @@
 			},
 			{
 				"inputs": [],
-				"name": "number",
+				"name": "getConversationRate",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getPrice",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getVersion",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "minimumUsd",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -41,7 +74,7 @@
 		"compilationTarget": {
 			"contracts/FundMe.sol": "FundMe"
 		},
-		"evmVersion": "london",
+		"evmVersion": "shanghai",
 		"libraries": {},
 		"metadata": {
 			"bytecodeHash": "ipfs"
@@ -53,12 +86,20 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/FundMe.sol": {
-			"keccak256": "0x8aa6b8b52a7b7e748872e751a61d85b8eb3abe5816dfb80a16f10073a842ea93",
+		"@chainlink/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol": {
+			"keccak256": "0xfe4e8bb4861bb3860ba890ab91a3b818ec66e5a8f544fb608cfcb73f433472cd",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://a4e0e6e9fb98eea23c8ba51a4ab26c465e1ff1a2e1150f7e22445757ccadeac8",
-				"dweb:/ipfs/QmRDGVvFT2ieRhAdiEYxT2WTuVjA63GiSzTJ5hkUVT21hi"
+				"bzz-raw://644cff84052e1e82b5bb502b2a46e8f142a62b0db4cd9b38200798ba8373c6f7",
+				"dweb:/ipfs/QmTa99QHrJBn3SXDizquPBUiTxVCNKQrHgaWJhuds5Sce2"
+			]
+		},
+		"contracts/FundMe.sol": {
+			"keccak256": "0x02567ab336907a326b56f893ea69525babd0900b6926fa29a22563924a35cb66",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://722c3f6b8ca0d7f3ae8e6da8a17f578b5ad2255ad156a3438f8a7d943805bfd2",
+				"dweb:/ipfs/QmWf92Vp8gtv7XPZ969qYSSKbx2s1e29D6fsr2fFUXTewE"
 			]
 		}
 	},
