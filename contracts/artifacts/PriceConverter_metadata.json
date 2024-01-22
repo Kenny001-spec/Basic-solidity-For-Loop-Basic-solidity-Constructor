@@ -8,12 +8,12 @@
 			{
 				"inputs": [
 					{
-						"internalType": "address",
-						"name": "",
-						"type": "address"
+						"internalType": "uint256",
+						"name": "ethAmount",
+						"type": "uint256"
 					}
 				],
-				"name": "addressToAmountFunded",
+				"name": "getConversationRate",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -26,25 +26,12 @@
 			},
 			{
 				"inputs": [],
-				"name": "fund",
-				"outputs": [],
-				"stateMutability": "payable",
-				"type": "function"
-			},
-			{
-				"inputs": [
+				"name": "getPrice",
+				"outputs": [
 					{
 						"internalType": "uint256",
 						"name": "",
 						"type": "uint256"
-					}
-				],
-				"name": "funders",
-				"outputs": [
-					{
-						"internalType": "address",
-						"name": "",
-						"type": "address"
 					}
 				],
 				"stateMutability": "view",
@@ -52,7 +39,7 @@
 			},
 			{
 				"inputs": [],
-				"name": "minimumUsd",
+				"name": "getVersion",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -77,7 +64,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/FundMe.sol": "FundMe"
+			"contracts/PriceConverter.sol": "PriceConverter"
 		},
 		"evmVersion": "shanghai",
 		"libraries": {},
@@ -99,20 +86,12 @@
 				"dweb:/ipfs/QmTa99QHrJBn3SXDizquPBUiTxVCNKQrHgaWJhuds5Sce2"
 			]
 		},
-		"contracts/FundMe.sol": {
-			"keccak256": "0x990194115d40e8513519a4041b17229df0a678650fba3fd426f2a02e0ba91cb2",
-			"license": "MIT",
-			"urls": [
-				"bzz-raw://7777979e6c9d0dc533a026b4c7ba1157d858f3a514069a9f6f348855139590d2",
-				"dweb:/ipfs/QmX7xQjws4QMSKHp2SktJqH6nEcFqxncR8tJNCz6xLUNmc"
-			]
-		},
 		"contracts/PriceConverter.sol": {
-			"keccak256": "0xf353be33a97a6869891ea2afee222fe06285c628621a050011fd2d4630a208cd",
+			"keccak256": "0x9bedfa93d3d7d4c425ccf052556c3ccfc324fca50819ed16dbf4d596dafa5022",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://3ff1753354aee36ad5c6b0868cbf098d2d222b26680a3e022988cfc865a8b238",
-				"dweb:/ipfs/QmV2bBfp9hyvEDxXzAah8AKrUUE33fCHbkijMBxFbnd8Kw"
+				"bzz-raw://59a2c111020cd50e34e00170e0b40444d4d9404e19a77638fc3d29d703282045",
+				"dweb:/ipfs/QmTpnQSv3Muxav2ndWBngk5j6u8q3EuUW8oREkudgKNhbj"
 			]
 		}
 	},
