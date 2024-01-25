@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.8.23+commit.f704f362"
+		"version": "0.8.7+commit.e28d00a7"
 	},
 	"language": "Solidity",
 	"output": {
@@ -9,6 +9,28 @@
 				"inputs": [],
 				"stateMutability": "nonpayable",
 				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "NotOwner",
+				"type": "error"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "fallback"
+			},
+			{
+				"inputs": [],
+				"name": "MINIMUM_USD",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
 			},
 			{
 				"inputs": [
@@ -57,20 +79,7 @@
 			},
 			{
 				"inputs": [],
-				"name": "minimumUsd",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "owner",
+				"name": "i_owner",
 				"outputs": [
 					{
 						"internalType": "address",
@@ -87,6 +96,10 @@
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "receive"
 			}
 		],
 		"devdoc": {
@@ -104,7 +117,7 @@
 		"compilationTarget": {
 			"contracts/FundMe.sol": "FundMe"
 		},
-		"evmVersion": "shanghai",
+		"evmVersion": "london",
 		"libraries": {},
 		"metadata": {
 			"bytecodeHash": "ipfs"
@@ -125,11 +138,11 @@
 			]
 		},
 		"contracts/FundMe.sol": {
-			"keccak256": "0xf5f748f6923221da8cfe6a751c2bb3b1b02959dea9b3f032f38724290612f939",
+			"keccak256": "0xca54240c67bc41e26e4ed578d6aa49240af4f8d74c653a961ccc451c3f9ba7ec",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://8e0f669a9d17dbb3c0d2947b3c0d7ac516a059b248756170d4dba1d109272141",
-				"dweb:/ipfs/QmdamThEbkAGsyVYxf6cfrdBvNhBHn1pxmmgeSZG7T5fHZ"
+				"bzz-raw://d1379d0ac9099fe7d938139ff86971d574a23b91c1720d1713bfc512752746f2",
+				"dweb:/ipfs/QmW7xQGSdYwWxRVKmB9j9DW8FXYXL7mCM6QgxSCaCo7WDD"
 			]
 		},
 		"contracts/PriceConverter.sol": {
